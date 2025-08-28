@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* ✅ Fix sticky header overlap */
 }
 
 body {
@@ -19,7 +20,7 @@ body {
   min-height: 100vh;
 }
 
-/* Header and Navigation */
+/* Header */
 header {
   width: 100%;
   background: linear-gradient(90deg, #004080, #cc0000);
@@ -34,7 +35,6 @@ header {
 
 header h1 {
   font-size: 2.5rem;
-  letter-spacing: 2px;
   margin-bottom: 10px;
 }
 
@@ -42,7 +42,6 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  padding: 0;
   margin: 10px 0;
 }
 
@@ -63,7 +62,7 @@ nav a.active {
   color: #ff4444;
 }
 
-/* Main content */
+/* Main sections */
 main {
   max-width: 1000px;
   width: 95%;
@@ -82,25 +81,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* About Section */
-#about p {
-  font-size: 1.2rem;
-  color: #ddd;
-  line-height: 1.6;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-/* Works Section */
-#works .work-item {
-  background: #001a33;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #cc0000aa;
-}
-
-/* Profile Section */
+/* Profile */
 #profile {
   background: #001a33;
   padding: 30px 50px;
@@ -112,17 +93,10 @@ h2 {
 #profile-pic {
   width: 150px;
   height: 150px;
-  object-fit: cover;
   border-radius: 50%;
   border: 4px solid #cc0000;
   margin-bottom: 20px;
   box-shadow: 0 0 15px #004080cc;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#profile-pic:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00aaff;
 }
 
 .slide {
@@ -136,7 +110,7 @@ h2 {
   display: block;
 }
 
-/* Skills Section */
+/* Skills */
 #skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -152,14 +126,13 @@ h2 {
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 0 8px #004080aa;
-  transition: background 0.3s ease;
 }
 
 .skill-tag:hover {
   background: #004080;
 }
 
-/* Proficiency Section */
+/* Proficiency */
 .skill-bar {
   margin: 15px auto;
   max-width: 700px;
@@ -184,24 +157,13 @@ h2 {
   height: 100%;
   border-radius: 12px;
   background: linear-gradient(90deg, #cc0000, #004080);
-  box-shadow: 0 0 10px #cc0000bb;
   width: 0;
   transition: width 1.5s ease-in-out;
 }
 
-/* Contact Section */
+/* Contact */
 #contact {
   text-align: center;
-  color: #eee;
-}
-
-#contact a {
-  text-decoration: none;
-  font-weight: 600;
-}
-
-#contact a:hover {
-  text-decoration: underline;
 }
 
 form#contact-form {
@@ -230,17 +192,10 @@ form#contact-form button {
   border-radius: 14px;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 form#contact-form button:hover {
   background: #004080;
-}
-
-#form-status {
-  margin-top: 10px;
-  font-weight: 600;
-  font-size: 1rem;
 }
 
 /* Footer */
@@ -251,26 +206,4 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   box-shadow: 0 -2px 10px #cc0000aa;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav li {
-    margin: 10px 0;
-  }
-
-  #skills-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .skill-tag {
-    width: 70%;
-    text-align: center;
-  }
 }
